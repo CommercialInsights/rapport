@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rapportnytt — Partners</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+
+  .ti{display:inline-block; width:1em; height:1em; vertical-align:-0.125em; fill:none; stroke:currentColor; stroke-width:2; stroke-linecap:round; stroke-linejoin:round;}
+  .ti-player-play{fill:currentColor; stroke:none;}
+  :root{
+    --paper: #EEF0EA;
+    --paper-raised: #F7F8F4;
+    --ink: #161B1A;
+    --ink-soft: #4B5450;
+    --ink-faint: #8B948E;
+    --line: #C9CFC7;
+    --line-strong: #161B1A;
+    --accent: #1F5C4F;
+    --accent-tint: #E1EAE4;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'IBM Plex Sans', sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit; text-decoration:none;}
+  .wrap{max-width:1180px; margin:0 auto; padding:0 32px;}
+
+  header{border-bottom:1.5px solid var(--line-strong); padding:22px 0 16px;}
+  .header-row{display:flex; align-items:center; justify-content:space-between; gap:24px;}
+  .logo{font-family:'Newsreader', serif; font-size:26px; font-weight:500; letter-spacing:-0.01em; display:flex; align-items:center; gap:9px;}
+  .logo-mark{width:30px; height:30px; flex-shrink:0; overflow:visible;}
+  nav{display:flex; gap:28px; flex-wrap:wrap;}
+  nav a{font-size:14px; color:var(--ink-soft); padding:4px 0; border-bottom:1.5px solid transparent;}
+  nav a.active{color:var(--ink); border-bottom-color:var(--accent);}
+  .search{display:flex; align-items:center; gap:8px; color:var(--ink-faint); font-size:14px;}
+
+  main{padding:44px 0 56px;}
+  .intro{max-width:60ch; margin-bottom:40px;}
+  .intro h1{
+    font-family:'Newsreader', serif;
+    font-size:30px;
+    font-weight:500;
+    line-height:1.22;
+    margin:0 0 14px;
+  }
+  .intro p{font-size:15px; color:var(--ink-soft); line-height:1.65; margin:0;}
+
+  .partner-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:1px;
+    background:var(--line);
+    border-top:1.5px solid var(--line-strong);
+    border-bottom:1.5px solid var(--line-strong);
+  }
+  .partner-card{
+    background:var(--paper-raised);
+    padding:26px 24px;
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+  }
+  .partner-mark{
+    width:52px; height:52px;
+    background:var(--accent-tint);
+    display:flex; align-items:center; justify-content:center;
+    color:var(--accent);
+    font-family:'Newsreader', serif;
+    font-size:17px;
+    font-weight:500;
+  }
+  .partner-card h2{
+    font-family:'Newsreader', serif;
+    font-size:18px;
+    font-weight:500;
+    margin:0;
+    line-height:1.3;
+  }
+  .partner-card p{
+    font-size:13.5px;
+    color:var(--ink-soft);
+    line-height:1.55;
+    margin:0;
+  }
+  .partner-card .kind{
+    font-size:11.5px;
+    font-weight:500;
+    color:var(--accent);
+  }
+  .partner-card .link{
+    margin-top:auto;
+    font-size:13px;
+    color:var(--ink-faint);
+    display:flex;
+    align-items:center;
+    gap:6px;
+    padding-top:8px;
+    border-top:1px solid var(--line);
+  }
+  .partner-card .link i,   .partner-card .link svg{font-size:14px;}
+
+  .cta-strip{
+    margin-top:40px;
+    padding:26px 0 0;
+    display:flex;
+    align-items:baseline;
+    justify-content:space-between;
+    gap:24px;
+    flex-wrap:wrap;
+  }
+  .cta-strip p{font-size:14px; color:var(--ink-soft); margin:0; max-width:48ch;}
+  .cta-strip a{
+    font-size:14px;
+    font-weight:500;
+    color:var(--ink);
+    border-bottom:1.5px solid var(--accent);
+    padding-bottom:2px;
+    white-space:nowrap;
+  }
+
+  footer{
+    border-top:1.5px solid var(--line-strong);
+    padding:20px 0;
+    font-size:12.5px;
+    color:var(--ink-faint);
+    display:flex;
+    justify-content:space-between;
+  }
+
+  @media (max-width: 860px){
+    .partner-grid{grid-template-columns:1fr;}
+    nav{display:none;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap header-row">
+    <div class="logo"><svg class="logo-mark" viewBox="0 0 32 32">
+        <rect width="32" height="32" rx="8" fill="var(--accent)"/>
+        <path d="M9 7h9l5 5v13H9z" fill="none" stroke="var(--paper)" stroke-width="1.6" stroke-linejoin="round"/>
+        <path d="M18 7v5h5" fill="none" stroke="var(--paper)" stroke-width="1.6" stroke-linejoin="round"/>
+        <line x1="12" y1="17" x2="19" y2="17" stroke="var(--paper)" stroke-width="1.3"/>
+        <line x1="12" y1="20.5" x2="19" y2="20.5" stroke="var(--paper)" stroke-width="1.3"/>
+        <g transform="rotate(45 22 22)">
+          <rect x="18" y="20.5" width="11" height="3" rx="1" fill="var(--paper)"/>
+          <polygon points="29,19.7 32,22 29,24.3" fill="var(--paper)"/>
+        </g>
+      </svg>Rapportnytt</div>
+    <nav>
+      <a href="rapporterat-skiss.html">Start</a>
+      <a href="kvartalsrapporter.html">Kvartalsrapporter</a>
+      <a href="#">Årsrapporter</a>
+      <a href="#">Hållbarhetsrapporter</a>
+      <a href="#">Hållbarhetsredovisningar</a>
+      <a href="#">Intervju</a>
+      <a href="#">Bolag</a>
+      <a href="#" class="active">Partners</a>
+    </nav>
+    <div class="search"><svg class="ti ti-search" viewBox="0 0 24 24"><circle cx="10" cy="10" r="6"/><line x1="20" y1="20" x2="14.5" y2="14.5"/></svg></div>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="intro">
+    <h1>Partners</h1>
+    <p>Rapportnytt samarbetar med bolag och organisationer som delar vårt fokus på öppenhet kring finansiell och hållbarhetsrelaterad rapportering.</p>
+  </div>
+
+  <div class="partner-grid">
+    <div class="partner-card">
+      <div class="partner-mark">NF</div>
+      <span class="kind">Samarbetspartner</span>
+      <h2>Nordisk Fastighet</h2>
+      <p>Delar sina årsrapporter och hållbarhetsdata löpande med Rapportnytt sedan 2025.</p>
+      <a class="link" href="#"><svg class="ti ti-external-link" viewBox="0 0 24 24"><path d="M14 4h6v6"/><path d="M20 4L10 14"/><path d="M18 13v6a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h6"/></svg>Besök webbplats</a>
+    </div>
+    <div class="partner-card">
+      <div class="partner-mark">GL</div>
+      <span class="kind">Samarbetspartner</span>
+      <h2>Grön Logistik AB</h2>
+      <p>Bidrar med underlag till hållbarhetsredaktionen och medverkar i intervjuer.</p>
+      <a class="link" href="#"><svg class="ti ti-external-link" viewBox="0 0 24 24"><path d="M14 4h6v6"/><path d="M20 4L10 14"/><path d="M18 13v6a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h6"/></svg>Besök webbplats</a>
+    </div>
+    <div class="partner-card">
+      <div class="partner-mark">BB</div>
+      <span class="kind">Samarbetspartner</span>
+      <h2>Bygg &amp; Bo</h2>
+      <p>Publicerar sina hållbarhetsredovisningar exklusivt genom Rapportnytt.</p>
+      <a class="link" href="#"><svg class="ti ti-external-link" viewBox="0 0 24 24"><path d="M14 4h6v6"/><path d="M20 4L10 14"/><path d="M18 13v6a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h6"/></svg>Besök webbplats</a>
+    </div>
+    <div class="partner-card">
+      <div class="partner-mark">IA</div>
+      <span class="kind">Samarbetspartner</span>
+      <h2>Industri AB</h2>
+      <p>Delar kvartalsdata och medverkar regelbundet i redaktionens rörliga innehåll.</p>
+      <a class="link" href="#"><svg class="ti ti-external-link" viewBox="0 0 24 24"><path d="M14 4h6v6"/><path d="M20 4L10 14"/><path d="M18 13v6a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h6"/></svg>Besök webbplats</a>
+    </div>
+    <div class="partner-card">
+      <div class="partner-mark">FX</div>
+      <span class="kind">Samarbetspartner</span>
+      <h2>Företag X</h2>
+      <p>En av sajtens tidigaste partners, med rapporter tillbaka till lanseringen.</p>
+      <a class="link" href="#"><svg class="ti ti-external-link" viewBox="0 0 24 24"><path d="M14 4h6v6"/><path d="M20 4L10 14"/><path d="M18 13v6a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h6"/></svg>Besök webbplats</a>
+    </div>
+    <div class="partner-card">
+      <div class="partner-mark">+</div>
+      <span class="kind">Bli partner</span>
+      <h2>Vill ni synas här?</h2>
+      <p>Vi tar löpande in nya samarbetspartners inom kvartals-, års- och hållbarhetsrapportering.</p>
+      <a class="link" href="#"><svg class="ti ti-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="M3 6l9 7 9-7"/></svg>Kontakta oss</a>
+    </div>
+  </div>
+
+  <div class="cta-strip">
+    <p>Partners får en egen sida på Rapportnytt och synlighet i relevanta kategorier och i Intervju.</p>
+    <a href="#">Läs mer om samarbetet</a>
+  </div>
+</main>
+
+<footer class="wrap">
+  <span>Rapportnytt — en tjänst från Commercial Insights Sweden AB</span>
+  <span>Skiss · v1</span>
+</footer>
+
+</body>
+</html>
